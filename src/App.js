@@ -15,10 +15,12 @@ export default function App() {
     let x = e.clientX - rect.left;
     let y = e.clientY - rect.top;
     console.log(typeof x, y);
-    setPositions({
-      leftPosition: x,
-      topPosition: y,
-    });
+    setTimeout(() => {
+      setPositions({
+        leftPosition: x,
+        topPosition: y,
+      });
+    }, 1000);
   };
 
   useEffect(() => {
